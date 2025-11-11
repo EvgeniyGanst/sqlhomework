@@ -1,40 +1,56 @@
-INSERT INTO Musical_genres VALUES
-(1, 'Rock'),
-(2, 'Pop'),
-(3, 'Hip-hop');
+INSERT INTO Musical_genres (name) VALUES
+('Rock'), ('Pop'), ('Metal');
 
-INSERT INTO artists VALUES
-(1, 'Ленинград'),
-(2, 'Звери'),
-(3, 'Drake and Drake'),
-(4, 'Ёлка Метёлка');
+INSERT INTO Artists (name_artist) VALUES 
+('Zemfira'),
+('Queen'),
+('Ария'),
+('Dua Lipa');
 
-INSERT INTO artists_gangres VALUES
-(2, 1), (1, 1), (3, 3), (4, 2);
+INSERT INTO artists_gangres (artist_id, genre_id) VALUES
+(1, 1), (1, 2),
+(2, 1),
+(3, 3),
+(4, 2);
 
-INSERT INTO albums VALUES
-(1, 'Scorpion', '2018-05-22'),
-(2, 'Точки расставлены', '2014-03-01'),
-(3, 'Синяя Богиня', '2024-08-09'),
-(4, 'Районы-Кварталы', '2004-02-13');
+INSERT INTO albums (name, year_of_release) VALUES
+('Zemfira', '1999-05-10'),
+('A Night at the Opera', '1975-11-21'),
+('Крещение огнём', '2003-02-28'),
+('Future Nostalgia', '2020-03-27'),
+('Fine Line', '2019-12-13');      
 
-INSERT INTO albums_artist VALUES
-(3, 1), (1, 3), (4, 2), (2, 4);
+INSERT INTO albums_artist (artist_id, album_id) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(4, 5);
 
-INSERT INTO collections VALUES
-(1, '100 хитов русской поп музыки', '2018-10-01'),
-(2, '100 рок-хитов', '2019-05-05'),
-(3, 'Рэп и хип-хоп: лучшее', '2020-03-02'),
-(4, '100 хитов Рэп и хип-хоп', '2023-09-15');
+INSERT INTO Collections (name, year_of_realese) VALUES 
+('Rock Classics', '2019-01-01'),
+('Pop 2020 Hits', '2020-06-15'),
+('Metal Masters', '2021-03-10');
 
-INSERT INTO tracks VALUES 
-(1, 'My Survival', '00:02:16', 1 ),
-(2, 'Elevate', '00:03:05', 1 ),
-(3, 'Мой Прованс', '00:03:25', 2 ),
-(4, 'Шоколадка', '00:03:32', 2 ),
-(5, 'Районы-кварталы', '00:03:24', 4),
-(6, 'Дела', '00:03:15', 3);
+INSERT INTO Tracks (name, duration, album_id) VALUES 
+('Мой', '00:03:10', 1),
+('My Love', '00:04:15', 1),
+('Bohemian Rhapsody', '00:05:55', 2),
+('Show Must Go On', '00:04:05', 2),
+('Потеряй меня', '00:03:22', 3),
+('Сказочная тайга', '00:05:21', 3),
+('Don''t Start Now', '00:03:03', 4),
+('Levitating', '00:03:23', 4),
+('Watermelon Sugar', '00:02:54', 5),
+('Adore You', '00:03:27', 5);
 
 
-INSERT INTO collections_tracks VALUES 
-(1, 3), (1, 4), (2, 3), (3, 1), (4, 1), (5, 2), (6, 2);
+INSERT INTO Collections_tracks (track_id, collection_id) VALUES 
+(3, 1),
+(4, 1),
+(5, 1), 
+(6, 1),
+(7, 2), 
+(8, 2),
+(5, 3),
+(6, 3);
